@@ -67,7 +67,45 @@
     background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
 }
 
-.bestseller-title{
+.bestseller-title {
     font-size: 4rem;
+}
+
+.contact-title{
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 992px) {
+    .banner-content h1{
+    font-size: 3rem;
+}
+}
+
+/* Contact */
+.icons{
+    background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* All book */
+
+.all-book-tilte{
+    font-size: 3rem;
+     background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+
+}
+
+/* Cart */
+
+.img-cart{
+    width: 100px;
+}
+
+.cart-quality{
+    width: 80px;
 }
 

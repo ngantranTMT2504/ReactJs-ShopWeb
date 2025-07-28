@@ -121,14 +121,11 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
-
       <div className="py-5">
         <div className="banner py-5">
-          <div className="d-flex justify-content-between algn-items-center gap-5">
+          <div className="d-block d-lg-flex justify-content-between algn-items-center gap-5">
             <div className="w-50 banner-content">
               <h4>Good books</h4>
-
               <h1>A good book for a great mood</h1>
               <p className="my-3">
                 Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit,
@@ -137,11 +134,11 @@ const Home = () => {
               </p>
 
               <div>
-                <button className="btn-custom py-2 px-4">Discover now</button>
+                <button className="btn-custom py-3 px-4">Discover now</button>
               </div>
             </div>
 
-            <div className="w-100 px-0 my-auto overflow-hidden">
+            <div className="w-100 my-5 px-0 my-lg-auto overflow-hidden">
               <div>
                 <Splide
                   options={{
@@ -180,7 +177,7 @@ const Home = () => {
 
         <div className="special-book py-5 bg-light">
           <div className="container">
-            <h1 className="text-center pt-5">Discover your new book</h1>
+            <h1 className="text-center pt-5 fw-bold">Discover your new book</h1>
             <p className="mb-5 text-center">
               Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit,
               sed quia consequuntur magni dolores eos qui ratione voluptatem
@@ -202,7 +199,7 @@ const Home = () => {
             </div>
 
             <div className="d-flex justify-content-center">
-              <button className="btn-custom py-2 px-4">discover more</button>
+              <button className="btn-custom py-3 px-4">discover more</button>
             </div>
           </div>
         </div>
@@ -225,7 +222,7 @@ const Home = () => {
                   voluptatem sequi nesciunt.
                 </p>
                 <div>
-                  <button className="btn-custom py-2 px-4">Buy now</button>
+                  <button className="btn-custom py-3 px-4">Buy now</button>
                 </div>
               </div>
             </div>
@@ -234,7 +231,7 @@ const Home = () => {
 
         <div className="author py-5">
           <div className="container">
-            <h1 className="mb-5">Author of the Month</h1>
+            <h1 className="mb-5 fw-bold">Author of the Month</h1>
             <div className="row">
               <div className="col-lg-8">
                 <div className="row">
@@ -252,7 +249,7 @@ const Home = () => {
                         ratione voluptatem sequi nesciunt.
                       </p>
                       <div className="d-flex justify-content-center">
-                        <button className="btn-custom py-2 px-4">
+                        <button className="btn-custom py-3 px-4">
                           Read more
                         </button>
                       </div>
@@ -287,9 +284,32 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
 
-      <Footer />
+        <div className="contact py-5 bg-light">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6 my-auto">
+                <h1 className="contact-title fw-bold w-75 mb-5">
+                  Join Book Lovers Comunity and Get Latest Updates
+                </h1>
+                <div className="d-flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Your email address"
+                    className="py-2 px-4 w-75"
+                  ></input>
+                  <div>
+                    <button className="btn-custom py-3 px-4">subscribe</button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6 ps-5 py-2">
+                <img src="/images/subscribe-image.png"></img>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

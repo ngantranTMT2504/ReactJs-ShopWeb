@@ -1,7 +1,9 @@
+import { Link } from "react-router";
+
 const CardBook = (props) => {
   const { id, title, image, author, price } = props;
   return (
-    <a href="#" className="card-book text-decoration-none">
+    <Link to="/detail-book" className="card-book text-decoration-none">
     <div className="card border-0" id={id}>
       <img src={image} className="card-img-top" alt={title} />
       <div className="card-body">
@@ -16,7 +18,7 @@ const CardBook = (props) => {
       </div>
     </div>
 
-    </a>
+    </Link>
   );
 };
 

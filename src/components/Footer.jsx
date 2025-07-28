@@ -10,7 +10,7 @@ export const Footer = () => {
               <i className="bi bi-book-half me-2"></i>
               Bookshell
             </a>
-            <div>
+            <div className="mt-3">
                 <a href="#" className="text-white me-3 fs-5">
                   <i class="bi bi-facebook"></i>
                 </a>

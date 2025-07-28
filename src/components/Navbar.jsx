@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const Navbar = () => {
   return (
@@ -47,24 +48,24 @@ const Navbar = () => {
           <div className="collapse navbar-collapse " id="navbar">
             <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
               <li className="nav-item me-4">
-                <a className="nav-link active fw-semibold" href="#">
+                <Link className="nav-link active fw-semibold" to="/" activeClassName='active'>
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-4">
-                <a className="nav-link fw-semibold" href="#">
+                <Link to="/about" className="nav-link fw-semibold" activeClassName='active'>
                   About
-                </a>
+                </Link>
               </li>
               <li className="nav-item me-4">
-                <a className="nav-link fw-semibold" href="#">
-                  Book
-                </a>
+                <Link to="/books" className="nav-link fw-semibold" activeClassName='active'>
+                  Books
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link fw-semibold" href="#">
+                <Link to="/contact" className="nav-link fw-semibold" activeClassName='active'>
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="d-flex gap-3">
@@ -73,7 +74,7 @@ const Navbar = () => {
                   <i className="bi bi-cart4"></i>
                 </a>
               </div>
-              <button className="btn-custom py-1 px-4">Login</button>
+              <button className="btn-custom py-2 px-4">Login</button>
             </div>
           </div>
         </div>
