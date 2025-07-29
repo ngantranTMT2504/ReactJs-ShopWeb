@@ -7,7 +7,7 @@ const Register = () => {
       <div class="container my-5">
         <div class="row justify-content-center">
           <div class="col-lg-5 col-md-7">
-            <div class="bg-transparent pb-5">
+            <div class="bg-transparent pb-3">
               <div class="text-muted text-center mt-2 mb-3">
                 <small>Register</small>
               </div>

@@ -4,7 +4,7 @@
 }
 
 
-*{
+* {
     font-family: "Noto Sans", sans-serif;
     box-sizing: border-box;
     margin: 0;
@@ -12,87 +12,88 @@
 }
 
 /* Nav bar */
-.top-nav{
-     background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+.top-nav {
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
 
 }
-.logo-bookstore{
-    background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgba(36, 93, 158, 1) 100%);
+
+.logo-bookstore {
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgba(36, 93, 158, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.nav-link::after{
+.nav-link::after {
     content: '';
     width: 0;
     display: block;
     height: 3px;
-    background: linear-gradient(90deg,rgba(222, 140, 171, 1), rgba(36, 93, 158, 1));
+    background: linear-gradient(90deg, rgba(222, 140, 171, 1), rgba(36, 93, 158, 1));
 }
 
-.nav-link:hover::after{
+.nav-link:hover::after {
     width: 100%;
 }
 
-.btn-custom{
+.btn-custom {
     background: var(--blue-primary);
     color: white;
     border: none;
     transition: .2s ease-in-out;
-} 
+}
 
-.btn-custom:hover{
+.btn-custom:hover {
     background: var(--blue-light);
 }
 
 /* Footer */
 
-.footer .footer-link:hover{
-    background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgba(36, 93, 158, 1) 100%);
+.footer .footer-link:hover {
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgba(36, 93, 158, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* Home Page */
 
-.banner{
+.banner {
     margin-left: 8rem;
 }
 
-.banner-content h1{
+.banner-content h1 {
     font-size: 6rem;
 }
 
-.Best-seller .book-img{
-    background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+.Best-seller .book-img {
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
 }
 
 .bestseller-title {
     font-size: 4rem;
 }
 
-.contact-title{
+.contact-title {
     font-size: 3rem;
 }
 
 @media screen and (max-width: 992px) {
-    .banner-content h1{
-    font-size: 3rem;
-}
+    .banner-content h1 {
+        font-size: 3rem;
+    }
 }
 
 /* Contact */
-.icons{
-    background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+.icons {
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 /* All book */
 
-.all-book-tilte{
+.all-book-tilte {
     font-size: 3rem;
-     background: radial-gradient(circle,rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 700;
@@ -101,11 +102,73 @@
 
 /* Cart */
 
-.img-cart{
+.img-cart {
     width: 100px;
 }
 
-.cart-quality{
+.cart-quality {
     width: 80px;
 }
 
+
+/* Footer admin */
+.sidebar-admin{
+    position:fixed;
+}
+.sidebar {
+    min-height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.sidebar a {
+    color: #adb5bd;
+    text-decoration: none;
+    display: block;
+    padding: 12px 20px;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #495057;
+    color: #fff;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px 20px;
+    color: #fff;
+    background-color: #212529;
+}
+
+.footer-admin{
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.navbar-admin{
+    background: radial-gradient(circle, rgba(222, 140, 171, 1) 0%, rgb(36, 140, 158) 100%);
+    color: white;
+    font-weight: 600;
+}
+
+.content-right{
+    margin-left: 250px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.footer-admin{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
