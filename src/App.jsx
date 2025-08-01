@@ -11,6 +11,10 @@ import Dashboard from "./pages/admin/Dashboard";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import ListUserManagement from "./pages/admin/User/ListUserManagement";
+import CategoryLayout from "./pages/admin/Category/CategoryLayout";
+import ListCategory from "./pages/admin/Category/ListCategory"
+import UpdateCategory from "./pages/admin/Category/UpdateCategory"
+import CreateCategory from "./pages/admin/Category/CreateCategory"
 
 function App() {
   return (
@@ -29,8 +33,14 @@ function App() {
       </Route>
       <Route path="/admin" element={<AdminLayout />}>
         <Route index element={<Navigate to="dashboard" replace />} />
-        <Route index path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />} />
         <Route path="user-management" element={<ListUserManagement />} />
+         <Route path="category" element={<CategoryLayout />}>
+            <Route index element={<Navigate to="list" replace />} />
+            <Route path="list" element={<ListCategory />} />
+            <Route path="create" element={<CreateCategory />} />
+            <Route path="update" element={<UpdateCategory />} />
+          </Route>
       </Route>
     </Routes>
   );

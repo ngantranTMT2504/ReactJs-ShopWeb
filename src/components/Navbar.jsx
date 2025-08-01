@@ -27,13 +27,11 @@ const Navbar = () => {
       </div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary shadow py-2">
         <div className="container ">
-          <a
-            className="navbar-brand text-uppercase logo-bookstore fw-semibold"
-            href="#"
-          >
+          <Link to="/"
+            className="navbar-brand text-uppercase logo-bookstore fw-semibold">
             <i className="bi bi-book-half me-2"></i>
             Bookshell
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -70,11 +68,11 @@ const Navbar = () => {
             </ul>
             <div className="d-flex gap-3">
               <div className="cart ">
-                <a className="fs-4 text-black">
+                <Link to="/cart" className="fs-4 text-black">
                   <i className="bi bi-cart4"></i>
-                </a>
+                </Link>
               </div>
-              <button className="btn-custom py-2 px-4">Login</button>
+              <Link to="/auth/login" className="btn-custom py-2 px-4 text-decoration-none" >Login</Link>
             </div>
           </div>
         </div>
