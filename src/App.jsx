@@ -15,6 +15,10 @@ import CategoryLayout from "./pages/admin/Category/CategoryLayout";
 import ListCategory from "./pages/admin/Category/ListCategory"
 import UpdateCategory from "./pages/admin/Category/UpdateCategory"
 import CreateCategory from "./pages/admin/Category/CreateCategory"
+import { BookLayout } from "./pages/admin/Book/BookLayout";
+import ListBook from "./pages/admin/Book/ListBookManagement"
+import CreateBook from "./pages/admin/Book/CreateBookManagement"
+import UpdateBook from "./pages/admin/Book/UpdateBookManagement"
 
 function App() {
   return (
@@ -39,7 +43,13 @@ function App() {
             <Route index element={<Navigate to="list" replace />} />
             <Route path="list" element={<ListCategory />} />
             <Route path="create" element={<CreateCategory />} />
-            <Route path="update" element={<UpdateCategory />} />
+            <Route path="update/:id" element={<UpdateCategory />} />
+          </Route>
+           <Route path="book" element={<BookLayout />}>
+            <Route index element={<Navigate to="list" replace />} />
+            <Route path="list" element={<ListBook />} />
+            <Route path="create" element={<CreateBook />} />
+            <Route path="update/:id" element={<UpdateBook />} />
           </Route>
       </Route>
     </Routes>

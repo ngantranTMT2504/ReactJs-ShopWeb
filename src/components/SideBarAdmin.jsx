@@ -19,9 +19,9 @@ const SideBarAdmin = () => {
         <Link to="/admin/category" className={location.pathname.startsWith("/admin/category") ? "active" : ""}>
           <i className="bi bi-people me-2"></i>Category
         </Link>
-        <a href="#">
+        <Link to="/admin/book">
           <i className="bi bi-book me-2"></i> Books
-        </a>
+        </Link>
         <a href="#">
           <i className="bi bi-receipt me-2"></i> Orders
         </a>

@@ -12,13 +12,13 @@ export const Footer = () => {
             </a>
             <div className="mt-3">
                 <a href="#" className="text-white me-3 fs-5">
-                  <i class="bi bi-facebook"></i>
+                  <i className="bi bi-facebook"></i>
                 </a>
                 <a  href="#" className="text-white me-3 fs-5">
-                  <i class="bi bi-github"></i>
+                  <i className="bi bi-github"></i>
                 </a>
                 <a  href="#" className="text-white me-2 fs-5">
-                  <i class="bi bi-twitter"></i>
+                  <i className="bi bi-twitter"></i>
                 </a>
             </div>
           </div>

@@ -3,10 +3,11 @@ import axios from "axios";
 import { TableCustom } from "../../../components/Admin/TableCustom";
 import { PaginationCustom } from "../../../components/Admin/PaginationCustom";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ListCategoryManagement = () => {
   const [data, setData] = useState([]);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
 
   const navigate = useNavigate(); 
@@ -34,7 +35,7 @@ const ListCategoryManagement = () => {
   }, [page]);
 
   const handleEdit = (id) => {
-    navigate(`/admin/category/edit/${id}`);
+    navigate(`/admin/category/update/${id}`);
   };
 
   const handleDelete = (id) => {
@@ -50,10 +51,10 @@ const ListCategoryManagement = () => {
       <h4>Category Management</h4>
       <p className="text-secondary">Manage category and their permissions</p>
       <hr></hr>
-      <button className="btn-custom py-2 px-4 mb-3">
+      <Link to="/admin/category/create" className="btn-custom py-2 px-4 mb-3 text-decoration-none">
         <i class="bi bi-clipboard-plus me-2"></i>
         Add Category
-      </button>
+      </Link>
 
       <div className="d-flex justify-content-end my-3">
         <div>

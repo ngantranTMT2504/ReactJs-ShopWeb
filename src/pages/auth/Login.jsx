@@ -1,65 +1,104 @@
-import { Link } from "react-router";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(""); 
+    try {
+      const response = await axios.post("http://localhost:8080/api/v1/auth/login", {
+        email,
+        password,
+      });
+
+      const token = response.data.token;
+      sessionStorage.setItem("token", token);
+
+      navigate("/admin");
+    } catch (err) {
+      setError(
+        err.response?.data?.message || "Login failed. Please try again."
+      );
+    }
+  };
+
   return (
     <>
-      <div class="container my-5">
-        <div class="row justify-content-center">
-          <div class="col-lg-5 col-md-7">
-            <div class="bg-transparent pb-5">
-              <div class="text-muted text-center mt-2 mb-3">
+      <div className="container my-5">
+        <div className="row justify-content-center">
+          <div className="col-lg-5 col-md-7">
+            <div className="bg-transparent pb-5">
+              <div className="text-muted text-center mt-2 mb-3">
                 <small>Login with </small>
               </div>
-              <div class="btn-wrapper text-center">
-                <Link to="#" class="btn btn-neutral btn-icon">
-                  <span class="me-2">
-                    <i class="bi bi-github fs-4"></i>
+              <div className="btn-wrapper text-center">
+                <Link to="#" className="btn btn-neutral btn-icon">
+                  <span className="me-2">
+                    <i className="bi bi-github fs-4"></i>
                   </span>
-                  <span class="">Github</span>
+                  <span className="">Github</span>
                 </Link>
-                <Link to="#" class="btn btn-neutral btn-icon">
-                  <span class="me-2">
-                    <i class="bi bi-google fs-4"></i>
+                <Link to="#" className="btn btn-neutral btn-icon">
+                  <span className="me-2">
+                    <i className="bi bi-google fs-4"></i>
                   </span>
-                  <span class="">Google</span>
+                  <span className="">Google</span>
                 </Link>
               </div>
             </div>
-            <div class="px-lg-5 pb-lg-5">
-              <div class="text-center text-muted mb-1"></div>
-              <form role="form">
-                <label class="text-sm">Email</label>
-                <div class="form-group mb-3">
-                  <div class="">
+            <div className="px-lg-5 pb-lg-5">
+              <div className="text-center text-muted mb-1"></div>
+              <form role="form" onSubmit={handleSubmit}>
+                <label className="text-sm">Email</label>
+                <div className="form-group mb-3">
+                  <div className="">
                     <input
-                      class="p-2 w-100"
+                      className="p-2 w-100"
                       placeholder="Email"
                       type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     ></input>
                   </div>
                 </div>
-                <label class="text-sm">Password</label>
-                <div class="form-group">
-                  <div class="">
+                <label className="text-sm">Password</label>
+                <div className="form-group">
+                  <div className="">
                     <input
-                      class="p-2 w-100"
+                      className="p-2 w-100"
                       placeholder="Password"
                       type="password"
+                      value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
                     ></input>
                   </div>
                 </div>
-                <div class="text-center my-3">
-                  <button class="btn-custom py-2 px-4" type="submit">
+                 {error && (
+                  <div className="alert alert-danger mt-3" role="alert">
+                    {error}
+                  </div>
+                )}
+                <div className="text-center my-3">
+                  <button className="btn-custom py-2 px-4" type="submit">
                     Login
                   </button>
                 </div>
               </form>
             </div>
-            <div class="d-flex justify-content-between mx-5">
-              <Link to="/forgot-password" class="text-decoration-none me-5">
+            <div className="d-flex justify-content-between mx-5">
+              <Link to="/forgot-password" className="text-decoration-none me-5">
                 Forgot password
               </Link>
-              <Link to="/register" class="text-decoration-none">
+              <Link to="/auth/register" className="text-decoration-none">
                 Register
               </Link>
             </div>
